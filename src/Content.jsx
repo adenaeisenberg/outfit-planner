@@ -1,10 +1,19 @@
 import { OutfitsIndex } from "./OutfitsIndex";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 export function Content() {
-  const outfits = [
-    { id: 1, day: "Sunday", top_id: 1, bottom_id: 1 },
-    { id: 2, day: "Monday", top_id: 1, bottom_id: 2 },
-  ];
+  const [outfits, setOutfits] = useState([]);
+
+  const handleIndexOutfits = () => {
+    console.log("handleIndexOutfits");
+    axios.get("http://localhost:3000/outfits.json").then((response) => {
+      console.log(response.data);
+      setOutfits(response.data);
+    });
+  };
+
+  useEffect(handleIndexOutfits, []);
 
   return (
     <div>
