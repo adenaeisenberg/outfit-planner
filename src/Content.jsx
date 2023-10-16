@@ -1,7 +1,7 @@
 export function Content() {
   return (
     <div>
-      <h1>Welcome to React!</h1>
+      <h1>Outfit Planner App</h1>
     </div>
   );
 }
