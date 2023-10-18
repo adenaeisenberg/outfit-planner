@@ -1,4 +1,4 @@
-export function BottomsIndex() {
+export function BottomsIndex(props) {
   return (
     <div>
       <h1>All Bottoms</h1>

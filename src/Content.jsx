@@ -62,7 +62,7 @@ export function Content() {
       <OutfitsIndex outfits={outfits} />
       <TopsNew onCreateTop={handleCreateTop} />
       <TopsIndex tops={tops} />
-      <BottomsIndex />
+      <BottomsIndex bottoms={bottoms} />
     </div>
   );
 }
