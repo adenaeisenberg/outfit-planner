@@ -6,7 +6,7 @@ export function TopsIndex(props) {
       {props.tops.map((top) => (
         <div key={top.id}>
           <h2>{top.name}</h2>
-          <img src={top.image_url} />
+          <img src={top.image_url} width={300} />
         </div>
       ))}
     </div>
