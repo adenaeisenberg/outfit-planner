@@ -52,6 +52,20 @@ export function Content() {
 
   useEffect(handleIndexTops, []);
 
+  // Bottom section
+
+  const [bottoms, setBottoms] = useState([]);
+
+  const handleIndexBottoms = () => {
+    console.log("handleIndexBottoms");
+    axios.get("http://localhost:3000/bottoms.json").then((response) => {
+      console.log(response.data);
+      setBottoms(response.data);
+    });
+  };
+
+  useEffect(handleIndexBottoms, []);
+
   return (
     <div>
       <h1>Outfit Planner App</h1>
