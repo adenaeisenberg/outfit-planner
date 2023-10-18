@@ -7,6 +7,7 @@ import { LogoutLink } from "./LogoutLink";
 import { OutfitsNew } from "./OutfitsNew";
 import { TopsIndex } from "./TopsIndex";
 import { TopsNew } from "./TopsNew";
+import { BottomsIndex } from "./BottomsIndex";
 
 export function Content() {
   // Outfit section //
@@ -61,6 +62,7 @@ export function Content() {
       <OutfitsIndex outfits={outfits} />
       <TopsNew onCreateTop={handleCreateTop} />
       <TopsIndex tops={tops} />
+      <BottomsIndex />
     </div>
   );
 }

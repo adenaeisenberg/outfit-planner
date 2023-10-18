@@ -1,7 +1,7 @@
-export function PhotosIndex() {
+export function BottomsIndex() {
   return (
     <div>
-      <h1>All photos</h1>
+      <h1>All Bottoms</h1>
     </div>
   );
 }
