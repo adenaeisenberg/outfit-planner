@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Signup } from "./Signup";
 import { Login } from "./Login";
 import { LogoutLink } from "./LogoutLink";
+import { OutfitsNew } from "./OutfitsNew";
 
 export function Content() {
   const [outfits, setOutfits] = useState([]);
@@ -24,6 +25,7 @@ export function Content() {
       <Signup />
       <Login />
       <LogoutLink />
+      <OutfitsNew />
       <OutfitsIndex outfits={outfits} />
     </div>
   );
