@@ -30,9 +30,16 @@ export function Content() {
 
   useEffect(handleIndexOutfits, []);
 
-  // Tops section
-
+  // Tops section //
   const [tops, setTops] = useState([]);
+
+  const handleCreateTop = (params, successCallback) => {
+    console.log("handleCreateTop", params);
+    axios.post("http://localhost:3000/tops.json", params).then((response) => {
+      setTops([...tops, response.data]);
+      successCallback();
+    });
+  };
 
   const handleIndexTops = () => {
     console.log("handleIndexTops");
@@ -52,7 +59,7 @@ export function Content() {
       <LogoutLink />
       <OutfitsNew onCreateOutfit={handleCreateOutfit} />
       <OutfitsIndex outfits={outfits} />
-      <TopsNew />
+      <TopsNew onCreateTop={handleCreateTop} />
       <TopsIndex tops={tops} />
     </div>
   );
