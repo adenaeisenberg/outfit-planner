@@ -1,8 +1,14 @@
-export function OutfitsNew() {
+export function OutfitsNew(props) {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const params = new FormData(event.target);
+    props.onCreateOutfit(params, () => event.target.reset());
+  };
+
   return (
     <div>
       <h1>New Outfit</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div>
           Day: <input name="day" type="text" />
         </div>
