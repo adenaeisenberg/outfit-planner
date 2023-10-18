@@ -17,6 +17,14 @@ export function Content() {
     });
   };
 
+  const handleCreateOutfit = (params, successCallback) => {
+    console.log("handleCreatePhoto", params);
+    axios.post("http://localhost:3000/outfits.json", params).then((response) => {
+      setOutfits([...outfits, response.data]);
+      successCallback();
+    });
+  };
+
   useEffect(handleIndexOutfits, []);
 
   return (
@@ -25,7 +33,7 @@ export function Content() {
       <Signup />
       <Login />
       <LogoutLink />
-      <OutfitsNew />
+      <OutfitsNew onCreateOutfit={handleCreateOutfit} />
       <OutfitsIndex outfits={outfits} />
     </div>
   );
