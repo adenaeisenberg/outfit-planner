@@ -39,7 +39,7 @@ export function Content() {
       <LogoutLink />
       <OutfitsNew onCreateOutfit={handleCreateOutfit} />
       <OutfitsIndex outfits={outfits} />
-      <TopsIndex />
+      <TopsIndex tops={tops} />
     </div>
   );
 }
