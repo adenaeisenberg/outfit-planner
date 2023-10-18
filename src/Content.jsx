@@ -31,6 +31,18 @@ export function Content() {
 
   // Tops section
 
+  const [tops, setTops] = useState([]);
+
+  const handleIndexTops = () => {
+    console.log("handleIndexTops");
+    axios.get("http://localhost:3000/tops.json").then((response) => {
+      console.log(response.data);
+      setTops(response.data);
+    });
+  };
+
+  useEffect(handleIndexTops, []);
+
   return (
     <div>
       <h1>Outfit Planner App</h1>
