@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 export function Header() {
   return (
@@ -27,8 +27,9 @@ export function Header() {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Features
+                <a className="nav-link" href="/signup">
+                  {/* <Link to="/signup">Signup</Link> */}
+                  Signup
                 </a>
               </li>
               <li className="nav-item">
@@ -37,7 +38,7 @@ export function Header() {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">
+                <a className="nav-link disabled" href="#" tabIndex="-1" aria-disabled="true">
                   Disabled
                 </a>
               </li>
