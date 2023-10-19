@@ -5,7 +5,6 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Signup } from "./Signup";
 import { Login } from "./Login";
-import { LogoutLink } from "./LogoutLink";
 import { OutfitsNew } from "./OutfitsNew";
 import { TopsIndex } from "./TopsIndex";
 import { TopsNew } from "./TopsNew";
@@ -84,7 +83,6 @@ export function Content() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
       </Routes>
-      <LogoutLink />
       <OutfitsNew onCreateOutfit={handleCreateOutfit} />
       <OutfitsIndex outfits={outfits} />
       <TopsNew onCreateTop={handleCreateTop} />
