@@ -76,7 +76,7 @@ export function Content() {
   useEffect(handleIndexBottoms, []);
 
   return (
-    <div>
+    <div className="container">
       <h1>Outfit Planner App</h1>
       <Signup />
       <Login />
