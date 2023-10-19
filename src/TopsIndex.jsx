@@ -1,3 +1,5 @@
+import { TopsNew } from "./TopsNew";
+
 /* eslint-disable react/prop-types */
 export function TopsIndex(props) {
   return (
@@ -9,6 +11,8 @@ export function TopsIndex(props) {
           <img src={top.image_url} width={300} />
         </div>
       ))}
+
+      <TopsNew />
     </div>
   );
 }
