@@ -42,11 +42,29 @@ export function Header() {
                   </li>
                 </>
               ) : (
-                <li className="nav-item">
-                  <a className="nav-link">
-                    <LogoutLink />
+                <>
+                  <li className="nav-item">
+                    <a className="nav-link">
+                      <LogoutLink />
+                    </a>
+                  </li>
+                  <a
+                    className="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    My Wardrobe
                   </a>
-                </li>
+                  <ul className="dropdown-menu">
+                    <li className="nav-item">
+                      <a className="nav-link" href="/tops">
+                        Tops
+                      </a>
+                    </li>
+                  </ul>
+                </>
               )}
             </ul>
           </div>
