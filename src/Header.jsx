@@ -43,11 +43,6 @@ export function Header() {
                 </>
               ) : (
                 <>
-                  <li className="nav-item">
-                    <a className="nav-link">
-                      <LogoutLink />
-                    </a>
-                  </li>
                   <a
                     className="nav-link dropdown-toggle"
                     href="#"
@@ -64,6 +59,11 @@ export function Header() {
                       </a>
                     </li>
                   </ul>
+                  <li className="nav-item">
+                    <a className="nav-link">
+                      <LogoutLink />
+                    </a>
+                  </li>
                 </>
               )}
             </ul>

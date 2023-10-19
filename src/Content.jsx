@@ -82,11 +82,12 @@ export function Content() {
       <Routes>
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/tops" element={<TopsIndex tops={tops} />} />
       </Routes>
       <OutfitsNew onCreateOutfit={handleCreateOutfit} />
       <OutfitsIndex outfits={outfits} />
       <TopsNew onCreateTop={handleCreateTop} />
-      <TopsIndex tops={tops} />
+
       <BottomsNew onCreateBottom={handleCreateBottom} />
       <BottomsIndex bottoms={bottoms} />
     </div>
