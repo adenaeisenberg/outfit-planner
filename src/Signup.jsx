@@ -45,11 +45,7 @@ export function Signup() {
         </div>
         <button type="submit">Signup</button>
       </form>
-
-      <h8>
-        {" "}
-        Already a VW user? Click <Link to="/login">here</Link> to login
-      </h8>
+      Already a VW user? Click <Link to="/login">here</Link> to login
     </div>
   );
 }
