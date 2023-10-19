@@ -80,7 +80,9 @@ export function Content() {
   return (
     <div className="container">
       <h1>Outfit Planner App</h1>
-      <Signup />
+      <Routes> 
+      <Route path="/signup" element={ <Signup />} /> 
+        <Routes /> 
       <Login />
       <LogoutLink />
       <OutfitsNew onCreateOutfit={handleCreateOutfit} />
