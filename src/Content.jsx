@@ -7,7 +7,7 @@ import { Signup } from "./Signup";
 import { Login } from "./Login";
 import { OutfitsNew } from "./OutfitsNew";
 import { TopsIndex } from "./TopsIndex";
-import { TopsNew } from "./TopsNew";
+// import { TopsNew } from "./TopsNew";
 import { BottomsIndex } from "./BottomsIndex";
 import { BottomsNew } from "./BottomsNew";
 
@@ -36,13 +36,13 @@ export function Content() {
   // Tops section //
   const [tops, setTops] = useState([]);
 
-  const handleCreateTop = (params, successCallback) => {
-    console.log("handleCreateTop", params);
-    axios.post("http://localhost:3000/tops.json", params).then((response) => {
-      setTops([...tops, response.data]);
-      successCallback();
-    });
-  };
+  // const handleCreateTop = (params, successCallback) => {
+  //   console.log("handleCreateTop", params);
+  //   axios.post("http://localhost:3000/tops.json", params).then((response) => {
+  //     setTops([...tops, response.data]);
+  //     successCallback();
+  //   });
+  // };
 
   const handleIndexTops = () => {
     console.log("handleIndexTops");
@@ -82,11 +82,11 @@ export function Content() {
       <Routes>
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/tops" element={<TopsIndex tops={tops} />} />
+        <Route path="/tops" element={<TopsIndex tops={tops} setTops={setTops} />} />
       </Routes>
       <OutfitsNew onCreateOutfit={handleCreateOutfit} />
       <OutfitsIndex outfits={outfits} />
-      <TopsNew onCreateTop={handleCreateTop} />
+      {/* <TopsNew onCreateTop={handleCreateTop} /> */}
 
       <BottomsNew onCreateBottom={handleCreateBottom} />
       <BottomsIndex bottoms={bottoms} />
