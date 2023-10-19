@@ -82,8 +82,8 @@ export function Content() {
       <h1>Outfit Planner App</h1>
       <Routes>
         <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
-      <Login />
       <LogoutLink />
       <OutfitsNew onCreateOutfit={handleCreateOutfit} />
       <OutfitsIndex outfits={outfits} />

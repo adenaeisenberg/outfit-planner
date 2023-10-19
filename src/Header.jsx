@@ -29,12 +29,12 @@ export function Header() {
               <li className="nav-item">
                 <a className="nav-link" href="/signup">
                   {/* <Link to="/signup">Signup</Link> */}
-                  Signup
+                  Sign Up
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Pricing
+                <a className="nav-link" href="/login">
+                  Login
                 </a>
               </li>
               <li className="nav-item">
