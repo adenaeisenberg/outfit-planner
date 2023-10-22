@@ -7,9 +7,7 @@ import { Signup } from "./Signup";
 import { Login } from "./Login";
 import { OutfitsNew } from "./OutfitsNew";
 import { TopsIndex } from "./TopsIndex";
-// import { TopsNew } from "./TopsNew";
 import { BottomsIndex } from "./BottomsIndex";
-import { BottomsNew } from "./BottomsNew";
 
 export function Content() {
   // Outfit section //
