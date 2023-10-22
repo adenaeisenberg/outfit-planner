@@ -1,4 +1,7 @@
 /* eslint-disable react/prop-types */
+
+import "./Dropdown.css";
+
 export function OutfitsNew(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -14,20 +17,22 @@ export function OutfitsNew(props) {
           Day: <input name="day" type="text" />
         </div>
 
-        <div>
+        <div className="dropdown">
           Top:
-          <select name="top_id" id="tops">
+          <select className="dropbtn" name="top_id" id="tops">
             {props.tops.map((top) => (
               <option value={top.id} key={top.id}>
-                {top.name}{" "}
+                <img
+                  src="https://media.geeksforgeeks.org/wp-content/uploads/20200630132503/iflag.jpg"
+                  width="20"
+                  height="15"
+                />
+                {top.name}
               </option>
             ))}
           </select>
         </div>
 
-        {/* <div>
-          Top: <input name="top_id" type="text" />
-        </div> */}
         <div>
           Bottom: <input name="bottom_id" type="text" />
         </div>

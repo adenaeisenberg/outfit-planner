@@ -7,9 +7,6 @@ import { OutfitsIndex } from "./OutfitsIndex";
 import { TopsIndex } from "./TopsIndex";
 import { BottomsIndex } from "./BottomsIndex";
 
-// import { TestingBootstrapOption } from "./TestingBootstrapOption";
-import { TestingHtmlOption } from "./TestingHtmlOption";
-
 export function Content() {
   // Outfit section //
   const [outfits, setOutfits] = useState([]);
@@ -61,8 +58,6 @@ export function Content() {
         <Route path="/bottoms" element={<BottomsIndex bottoms={bottoms} setBottoms={setBottoms} />} />
         <Route path="/outfits" element={<OutfitsIndex outfits={outfits} setOutfits={setOutfits} tops={tops} />} />
       </Routes>
-
-      <TestingHtmlOption />
     </div>
   );
 }
