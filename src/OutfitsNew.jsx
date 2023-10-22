@@ -19,9 +19,10 @@ export function OutfitsNew(props) {
         <div>
           Bottom: <input name="bottom_id" type="text" />
         </div>
-        <div>
+        {/* going to have to comment out below: */}
+        {/* <div>
           User_id: <input name="user_id" type="text" />
-        </div>
+        </div> */}
         <button type="submit">Add Outfit to Wardrobe</button>
       </form>
     </div>

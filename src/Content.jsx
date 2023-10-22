@@ -24,7 +24,7 @@ export function Content() {
   };
 
   const handleCreateOutfit = (params, successCallback) => {
-    console.log("handleCreatePhoto", params);
+    console.log("handleCreateOutfit", params);
     axios.post("http://localhost:3000/outfits.json", params).then((response) => {
       setOutfits([...outfits, response.data]);
       successCallback();
