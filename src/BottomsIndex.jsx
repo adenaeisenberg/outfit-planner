@@ -1,3 +1,5 @@
+import { BottomsNew } from "./BottomsNew";
+
 /* eslint-disable react/prop-types */
 export function BottomsIndex(props) {
   return (
@@ -9,6 +11,8 @@ export function BottomsIndex(props) {
           <img src={bottom.image_url} width={300} />
         </div>
       ))}
+
+      <BottomsNew />
     </div>
   );
 }
