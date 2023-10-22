@@ -66,12 +66,10 @@ export function Content() {
         <Route path="/login" element={<Login />} />
         <Route path="/tops" element={<TopsIndex tops={tops} setTops={setTops} />} />
         <Route path="/bottoms" element={<BottomsIndex bottoms={bottoms} setBottoms={setBottoms} />} />
+        <Route path="/outfits" element={<OutfitsIndex outfits={outfits} />} />
       </Routes>
       <OutfitsNew onCreateOutfit={handleCreateOutfit} />
       <OutfitsIndex outfits={outfits} />
-      {/* <TopsNew onCreateTop={handleCreateTop} /> */}
-
-      {/* <BottomsNew onCreateBottom={handleCreateBottom} /> */}
     </div>
   );
 }
