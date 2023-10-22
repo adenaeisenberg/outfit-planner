@@ -21,14 +21,6 @@ export function Content() {
     });
   };
 
-  const handleCreateOutfit = (params, successCallback) => {
-    console.log("handleCreateOutfit", params);
-    axios.post("http://localhost:3000/outfits.json", params).then((response) => {
-      setOutfits([...outfits, response.data]);
-      successCallback();
-    });
-  };
-
   useEffect(handleIndexOutfits, []);
 
   // Tops section //
@@ -66,10 +58,8 @@ export function Content() {
         <Route path="/login" element={<Login />} />
         <Route path="/tops" element={<TopsIndex tops={tops} setTops={setTops} />} />
         <Route path="/bottoms" element={<BottomsIndex bottoms={bottoms} setBottoms={setBottoms} />} />
-        <Route path="/outfits" element={<OutfitsIndex outfits={outfits} />} />
+        <Route path="/outfits" element={<OutfitsIndex outfits={outfits} setOutfits={setOutfits} />} />
       </Routes>
-      <OutfitsNew onCreateOutfit={handleCreateOutfit} />
-      <OutfitsIndex outfits={outfits} />
     </div>
   );
 }
