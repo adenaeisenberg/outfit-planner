@@ -13,9 +13,21 @@ export function OutfitsNew(props) {
         <div>
           Day: <input name="day" type="text" />
         </div>
+
         <div>
-          Top: <input name="top_id" type="text" />
+          Top:
+          <select name="top_id" id="tops">
+            {props.tops.map((top) => (
+              <option value={top.id} key={top.id}>
+                {top.name}{" "}
+              </option>
+            ))}
+          </select>
         </div>
+
+        {/* <div>
+          Top: <input name="top_id" type="text" />
+        </div> */}
         <div>
           Bottom: <input name="bottom_id" type="text" />
         </div>

@@ -23,7 +23,7 @@ export function OutfitsIndex(props) {
         </div>
       ))}
 
-      <OutfitsNew onCreateOutfit={handleCreateOutfit} />
+      <OutfitsNew tops={props.tops} onCreateOutfit={handleCreateOutfit} />
     </div>
   );
 }
