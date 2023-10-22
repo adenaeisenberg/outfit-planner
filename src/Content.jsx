@@ -1,11 +1,9 @@
 import { Routes, Route } from "react-router-dom";
-
-import { OutfitsIndex } from "./OutfitsIndex";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Signup } from "./Signup";
 import { Login } from "./Login";
-import { OutfitsNew } from "./OutfitsNew";
+import { OutfitsIndex } from "./OutfitsIndex";
 import { TopsIndex } from "./TopsIndex";
 import { BottomsIndex } from "./BottomsIndex";
 
