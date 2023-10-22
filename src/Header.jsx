@@ -58,6 +58,12 @@ export function Header() {
                         Tops
                       </a>
                     </li>
+
+                    <li className="nav-item">
+                      <a className="nav-link" href="/bottoms">
+                        Bottoms
+                      </a>
+                    </li>
                   </ul>
                   <li className="nav-item">
                     <a className="nav-link">
