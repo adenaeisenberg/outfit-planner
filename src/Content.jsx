@@ -7,7 +7,7 @@ import { OutfitsIndex } from "./OutfitsIndex";
 import { TopsIndex } from "./TopsIndex";
 import { BottomsIndex } from "./BottomsIndex";
 
-import { Testing } from "./Testing";
+import { TestingBootstrapOption } from "./TestingBootstrapOption";
 
 export function Content() {
   // Outfit section //
@@ -61,7 +61,7 @@ export function Content() {
         <Route path="/outfits" element={<OutfitsIndex outfits={outfits} setOutfits={setOutfits} />} />
       </Routes>
 
-      <Testing />
+      <TestingBootstrapOption />
     </div>
   );
 }
