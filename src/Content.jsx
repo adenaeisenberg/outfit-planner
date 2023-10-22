@@ -36,14 +36,6 @@ export function Content() {
   // Tops section //
   const [tops, setTops] = useState([]);
 
-  // const handleCreateTop = (params, successCallback) => {
-  //   console.log("handleCreateTop", params);
-  //   axios.post("http://localhost:3000/tops.json", params).then((response) => {
-  //     setTops([...tops, response.data]);
-  //     successCallback();
-  //   });
-  // };
-
   const handleIndexTops = () => {
     console.log("handleIndexTops");
     axios.get("http://localhost:3000/tops.json").then((response) => {
@@ -57,14 +49,6 @@ export function Content() {
   // Bottom section
 
   const [bottoms, setBottoms] = useState([]);
-
-  // const handleCreateBottom = (params, successCallback) => {
-  //   console.log("handleCreateBottom", params);
-  //   axios.post("http://localhost:3000/bottoms.json", params).then((response) => {
-  //     setBottoms([...bottoms, response.data]);
-  //     successCallback();
-  //   });
-  // };
 
   const handleIndexBottoms = () => {
     console.log("handleIndexBottoms");
