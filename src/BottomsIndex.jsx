@@ -1,7 +1,16 @@
-import { BottomsNew } from "./BottomsNew";
-
 /* eslint-disable react/prop-types */
+import { BottomsNew } from "./BottomsNew";
+import axios from "axios";
+
 export function BottomsIndex(props) {
+  const handleCreateBottom = (params, successCallback) => {
+    console.log("handleCreateBottom", params);
+    axios.post("http://localhost:3000/bottoms.json", params).then((response) => {
+      props.setBottoms([...props.bottoms, response.data]);
+      successCallback();
+    });
+  };
+
   return (
     <div>
       <h1>All Bottoms</h1>
@@ -12,7 +21,7 @@ export function BottomsIndex(props) {
         </div>
       ))}
 
-      <BottomsNew />
+      <BottomsNew onCreateBottom={handleCreateBottom} />
     </div>
   );
 }
