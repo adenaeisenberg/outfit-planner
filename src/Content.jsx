@@ -7,6 +7,9 @@ import { OutfitsIndex } from "./OutfitsIndex";
 import { TopsIndex } from "./TopsIndex";
 import { BottomsIndex } from "./BottomsIndex";
 
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
+
 export function Content() {
   // Outfit section //
   const [outfits, setOutfits] = useState([]);
@@ -48,6 +51,14 @@ export function Content() {
 
   useEffect(handleIndexBottoms, []);
 
+  //  Calendar:
+
+  const [calDate, setCalDate] = useState(new Date());
+
+  function onChange(calDate) {
+    setCalDate(calDate);
+  }
+
   return (
     <div className="container">
       <h1>Outfit Planner App</h1>
@@ -61,6 +72,7 @@ export function Content() {
           element={<OutfitsIndex outfits={outfits} setOutfits={setOutfits} tops={tops} bottoms={bottoms} />}
         />
       </Routes>
+      <Calendar onChange={onChange} value={calDate} />
     </div>
   );
 }
