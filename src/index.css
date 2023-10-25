@@ -1,3 +1,7 @@
+#root {
+  background-image: url("assets/hanger_background.webp")
+}
+
 html {
   scroll-behavior: smooth;
 }

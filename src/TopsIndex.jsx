@@ -14,6 +14,7 @@ export function TopsIndex(props) {
   return (
     <div>
       <h1>All Tops</h1>
+      {/* <div className="card-deck"> */}
       {props.tops.map((top) => (
         <div key={top.id} className="card" style={{ width: "18rem" }}>
           {/* THIS IS SUPPOSED TO BE IN LINE ABOVE-- GETTING ERRORS? ---- style="width: 18rem" */}
@@ -29,15 +30,9 @@ export function TopsIndex(props) {
           </div>
         </div>
       ))}
+      {/* </div> */}
 
       <TopsNew onCreateTop={handleCreateTop} />
     </div>
   );
 }
-
-// {props.tops.map((top) => (
-//   <div key={top.id}>
-//     <h2>{top.name}</h2>
-//     <img src={top.image_url} width={300} />
-//   </div>
-// ))}
