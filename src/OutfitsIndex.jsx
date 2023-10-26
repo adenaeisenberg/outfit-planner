@@ -12,25 +12,15 @@ export function OutfitsIndex(props) {
   };
 
   return (
-    // <div>
-    //   <h1>All outfits</h1>
-    //   {props.outfits.map((outfit) => (
-    //     <div key={outfit.id}>
-    //       <h2>{outfit.day}</h2>
-    //       const top = props.tops.find((top) => top.id === outfit.top_id); )
-
-    //       {top && (
-    //         <div>
-    //           <p>Top: {top.image_url}</p>
-    //           <img src={top.image_url} alt={top.name} />
-    //         </div>
-    //       )}
-    //       {/* 
-    //       <p>Top: {props.tops.image_url}</p>
-    //       {props.tops.map((top) => ( if (top.id === outfit.top_id) )) } */}
-    //       {/* <img src={outfit.top.image_url} /> */}
-    //       <p>Bottom: {outfit.bottom_id}</p>
-    //     </div>
+    <div>
+      <h1>All outfits</h1>
+      {props.outfits.map((outfit) => (
+        <div key={outfit.id}>
+          <h2>{outfit.day}</h2>
+          <p>Top: {outfit.top_id}</p>
+          {/* <img src={outfit.top.image_url} /> */}
+          <p>Bottom: {outfit.bottom_id}</p>
+        </div>
       ))}
 
       <OutfitsNew tops={props.tops} onCreateOutfit={handleCreateOutfit} bottoms={props.bottoms} />
