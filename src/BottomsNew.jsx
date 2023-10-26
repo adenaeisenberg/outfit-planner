@@ -7,17 +7,21 @@ export function BottomsNew(props) {
   };
 
   return (
-    <div>
-      <h1>Add Bottom</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          Name: <input name="name" type="text" />
-        </div>
-        <div>
-          Image Url: <input name="image_url" type="text" />
-        </div>
-        <button type="submit">Add Bottom</button>
-      </form>
+    <div className="card w-100">
+      <div className="card-body">
+        <h3 className="card-title">Add Bottom</h3>
+        <form onSubmit={handleSubmit}>
+          <div>
+            Name: <input name="name" type="text" />
+          </div>
+          <div>
+            Image Url: <input name="image_url" type="text" />
+          </div>
+          <button className="btn btn-primary" type="submit">
+            Add Bottom
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

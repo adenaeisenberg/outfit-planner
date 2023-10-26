@@ -2,8 +2,6 @@
 import { TopsNew } from "./TopsNew";
 import axios from "axios";
 
-import {} from "bootstrap";
-
 export function TopsIndex(props) {
   const handleCreateTop = (params, successCallback) => {
     console.log("handleCreateTop", params);
@@ -29,7 +27,6 @@ export function TopsIndex(props) {
             </div>
           </div>
         ))}
-        <br />
       </div>
       <br />
 

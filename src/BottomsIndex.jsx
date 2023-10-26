@@ -27,7 +27,6 @@ export function BottomsIndex(props) {
             </div>
           </div>
         ))}
-        <br />
       </div>
       <br />
 
