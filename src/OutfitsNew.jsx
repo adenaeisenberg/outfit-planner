@@ -9,6 +9,10 @@ export function OutfitsNew(props) {
     props.onCreateOutfit(params, () => event.target.reset());
   };
 
+  // const showTopImage = () => {
+  //   console.log("works");
+  // };
+
   return (
     <div>
       <h1>New Outfit</h1>
@@ -21,7 +25,12 @@ export function OutfitsNew(props) {
           Top:
           <select className="dropbtn" name="top_id" id="tops">
             {props.tops.map((top) => (
-              <option value={top.id} key={top.id}>
+              <option
+                value={top.id}
+                key={top.id}
+                onMouseEnter={console.log("works")}
+                onMouseLeave={() => this.removeTopImage}
+              >
                 {top.name}
               </option>
             ))}
