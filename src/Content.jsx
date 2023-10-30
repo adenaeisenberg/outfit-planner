@@ -53,11 +53,12 @@ export function Content() {
 
   //  Calendar:
 
-  const [calDate, setCalDate] = useState(new Date());
+  // https://www.youtube.com/watch?v=WutUO81wE90
+  const [date, setDate] = useState(new Date());
 
-  function onChange(calDate) {
-    setCalDate(calDate);
-  }
+  const onChange = (date) => {
+    setDate(date);
+  };
 
   return (
     <div className="container">
@@ -72,7 +73,7 @@ export function Content() {
           element={<OutfitsIndex outfits={outfits} setOutfits={setOutfits} tops={tops} bottoms={bottoms} />}
         />
       </Routes>
-      <Calendar onChange={onChange} value={calDate} />
+      <Calendar onChange={onChange} value={date} />
     </div>
   );
 }
