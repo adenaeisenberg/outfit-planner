@@ -17,9 +17,10 @@ export function OutfitsIndex(props) {
       {props.outfits.map((outfit) => (
         <div key={outfit.id}>
           <h2>{outfit.day}</h2>
-          <p>Top: {outfit.top_id}</p>
-          {/* <img src={outfit.top.image_url} /> */}
-          <p>Bottom: {outfit.bottom_id}</p>
+          {/* <p>Top: {outfit.top.image_url}</p> */}
+          <img src={outfit.top.image_url} />
+          <img src={outfit.bottom.image_url} />
+          {/* <p>Bottom: {outfit.bottom.image_url}</p> */}
         </div>
       ))}
 
