@@ -82,8 +82,16 @@ export function Content() {
           element={<OutfitsIndex outfits={outfits} setOutfits={setOutfits} tops={tops} bottoms={bottoms} date={date} />}
         />
       </Routes>
-      <Calendar onChange={onChange} value={date} onClickDay={(day) => setDate(day)} calendarType={"hebrew"} />
-      {/* {date} */}
+      <Calendar
+        onChange={onChange}
+        value={date}
+        onClickDay={(day) => setDate(day)}
+        calendarType={"hebrew"}
+        minDetail={"year"} // can change this to "century" or "month"
+        navigationLabel={({ date, label, locale, view }) =>
+          `Current view: ${view}, date: ${date.toLocaleDateString(locale)}`
+        }
+      />
     </div>
   );
 }
