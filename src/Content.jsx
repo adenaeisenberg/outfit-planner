@@ -64,6 +64,8 @@ export function Content() {
   // this useEffect fires every time the date changes
   useEffect(() => {
     console.log(date);
+
+    // if date ===
   }, [date]);
   // query database to see if outfit is saved for this date. if so, render it. (use if statement).
 
@@ -80,7 +82,7 @@ export function Content() {
           element={<OutfitsIndex outfits={outfits} setOutfits={setOutfits} tops={tops} bottoms={bottoms} date={date} />}
         />
       </Routes>
-      <Calendar onChange={onChange} value={date} onClickDay={(day) => setDate(day)} />
+      <Calendar onChange={onChange} value={date} onClickDay={(day) => setDate(day)} calendarType={"hebrew"} />
       {/* {date} */}
     </div>
   );
