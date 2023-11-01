@@ -11,6 +11,8 @@ export function OutfitsIndex(props) {
     });
   };
 
+  console.log(props.date);
+
   return (
     <div>
       <h1>All outfits</h1>
@@ -24,7 +26,7 @@ export function OutfitsIndex(props) {
         </div>
       ))}
 
-      <OutfitsNew tops={props.tops} onCreateOutfit={handleCreateOutfit} bottoms={props.bottoms} />
+      <OutfitsNew tops={props.tops} onCreateOutfit={handleCreateOutfit} bottoms={props.bottoms} date={props.date} />
     </div>
   );
 }

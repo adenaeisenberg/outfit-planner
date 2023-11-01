@@ -56,9 +56,16 @@ export function Content() {
   // https://www.youtube.com/watch?v=WutUO81wE90
   const [date, setDate] = useState(new Date());
 
+  console.log(<Calendar />);
   const onChange = (date) => {
     setDate(date);
   };
+
+  // this useEffect fires every time the date changes
+  useEffect(() => {
+    console.log(date);
+  }, [date]);
+  // query database to see if outfit is saved for this date. if so, render it. (use if statement).
 
   return (
     <div className="container">
@@ -70,10 +77,11 @@ export function Content() {
         <Route path="/bottoms" element={<BottomsIndex bottoms={bottoms} setBottoms={setBottoms} />} />
         <Route
           path="/outfits"
-          element={<OutfitsIndex outfits={outfits} setOutfits={setOutfits} tops={tops} bottoms={bottoms} />}
+          element={<OutfitsIndex outfits={outfits} setOutfits={setOutfits} tops={tops} bottoms={bottoms} date={date} />}
         />
       </Routes>
-      <Calendar onChange={onChange} value={date} />
+      <Calendar onChange={onChange} value={date} onClickDay={(day) => setDate(day)} />
+      {/* {date} */}
     </div>
   );
 }

@@ -5,13 +5,10 @@ import "./Dropdown.css";
 export function OutfitsNew(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
+    console.log(props);
     const params = new FormData(event.target);
     props.onCreateOutfit(params, () => event.target.reset());
   };
-
-  // const showTopImage = () => {
-  //   console.log("works");
-  // };
 
   return (
     <div>
