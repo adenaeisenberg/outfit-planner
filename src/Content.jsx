@@ -62,7 +62,7 @@ export function Content() {
 
   return (
     <div className="container">
-      <h1>Outfit Planner App</h1>
+      <h1>TrendTracker, CodeCloset,</h1>
       <Routes>
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
