@@ -11,7 +11,7 @@ export function OutfitsIndex(props) {
     });
   };
 
-  console.log(props.date);
+  console.log(props.date); // not sure what this is doing here. We were testing something out- can't remember what-- i think whether date got passed this far
 
   return (
     <div>

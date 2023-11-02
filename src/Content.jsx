@@ -90,9 +90,10 @@ export function Content() {
         minDetail={"year"} // can change this to "century" or "month"
         navigationLabel={({ date, label, locale, view }) =>
           `Current view: ${view}, date: ${date.toLocaleDateString(locale)}`
-        }
+        } // this isn't quite working
         next2Label={false} // user can't click to next year
         prev2Label={false} // user can't click to prev year
+        tileContent={"This is where I will put outfit.top and outfit.bottom"}
       />
     </div>
   );
