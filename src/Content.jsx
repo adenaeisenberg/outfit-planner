@@ -91,6 +91,8 @@ export function Content() {
         navigationLabel={({ date, label, locale, view }) =>
           `Current view: ${view}, date: ${date.toLocaleDateString(locale)}`
         }
+        next2Label={false} // user can't click to next year
+        prev2Label={false} // user can't click to prev year
       />
     </div>
   );
