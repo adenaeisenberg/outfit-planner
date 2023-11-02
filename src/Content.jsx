@@ -86,14 +86,15 @@ export function Content() {
         onChange={onChange}
         value={date}
         onClickDay={(day) => setDate(day)}
-        calendarType={"hebrew"}
+        calendarType={"hebrew"} // calendar goes from Sun- Sat instead of Mon-Sun
         minDetail={"year"} // can change this to "century" or "month"
         navigationLabel={({ date, label, locale, view }) =>
           `Current view: ${view}, date: ${date.toLocaleDateString(locale)}`
         } // this isn't quite working
         next2Label={false} // user can't click to next year
         prev2Label={false} // user can't click to prev year
-        tileContent={"This is where I will put outfit.top and outfit.bottom"}
+        tileContent={({ outfit, date, view }) => (view === "month" && date.getDay() === 0 ? <p>It's Sunday!</p> : null)}
+        // this is where I need to put the logic about pulling the specific day's outfit
       />
     </div>
   );
