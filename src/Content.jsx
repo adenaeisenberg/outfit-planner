@@ -9,6 +9,7 @@ import { BottomsIndex } from "./BottomsIndex";
 
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
+import { compareAsc, format } from "date-fns";
 
 export function Content() {
   // Outfit section //
@@ -55,8 +56,20 @@ export function Content() {
 
   // https://www.youtube.com/watch?v=WutUO81wE90
   const [date, setDate] = useState(new Date());
+  const datesToAddContentTo = [new Date()];
 
-  console.log(<Calendar />);
+  function tileContent({ date, view }) {
+    // Add class to tiles in month view only
+    if (view === "month") {
+      // Check if a date React-Calendar wants to check is on the list of dates to add class to
+      if (datesToAddContentTo.find((dDate) => date.getDay() === dDate.getDate())) {
+        return "My content";
+      }
+    }
+  }
+
+  // tileContent={({ outfit, date, view }) => (view === "month" && date.getDay() === 0 ? <p>It's Sunday!</p> : null)} // this is where I need to put the logic about pulling the specific day's outfit
+
   const onChange = (date) => {
     setDate(date);
   };
@@ -88,14 +101,17 @@ export function Content() {
         onClickDay={(day) => setDate(day)}
         calendarType={"hebrew"} // calendar goes from Sun- Sat instead of Mon-Sun
         minDetail={"year"} // can change this to "century" or "month"
-        navigationLabel={({ date, label, locale, view }) => `Today is: ${date.toLocaleDateString(locale)}`} // this isn't quite working
+        navigationLabel={({ date, locale }) => `Today is: ${date.toLocaleDateString(locale)}`} // this isn't quite working
         next2Label={false} // user can't click to next year
         prev2Label={false} // user can't click to prev year
-        tileContent={({ outfit, date, view }) => (view === "month" && date.getDay() === 0 ? <p>It's Sunday!</p> : null)} // this is where I need to put the logic about pulling the specific day's outfit
+        tileContent={tileContent}
 
-        // I need a button that brings user back to 'Today'
+        // tileContent={({ outfit, date, view }) => (view === "month" && date.getDay() === 0 ? <p>It's Sunday!</p> : null)} // this is where I need to put the logic about pulling the specific day's outfit
+
+        // outfits.map((outfit) => (view === "month" && date === outfit.day ? {outfit.top} {outfit.bottom} : null))
       />
       <button>Today</button>
+      {/* onClick= brings user back to current month */}
     </div>
   );
 }
