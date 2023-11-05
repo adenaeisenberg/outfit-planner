@@ -17,19 +17,17 @@ export function OutfitsIndex(props) {
     <div>
       <h1>All outfits</h1>
 
-      <div className="card bg-dark text-white">
-        <img className="card-img" src="..." alt="Card image" />
-        <div className="card-img-overlay">
-          <h5 className="card-title">Card title</h5>
-          <p className="card-text">
-            This is a wider card with supporting text below as a natural lead-in to additional content. This content is
-            a little bit longer.
-          </p>
-          <p className="card-text">Last updated 3 mins ago</p>
-        </div>
-      </div>
-
       {props.outfits.map((outfit) => (
+        <div key={outfit.id} className="card text-center" style={{ width: "18rem" }}>
+          <div className="card-body">
+            <h5 className="card-title">{outfit.day}</h5>
+            <img className="card-img-top" src={outfit.top.image_url} alt="Card image cap" />
+            <img className="card-img-top" src={outfit.bottom.image_url} alt="Card image cap" />
+          </div>
+        </div>
+      ))}
+
+      {/* {props.outfits.map((outfit) => (
         <div key={outfit.id}>
           <h2>{outfit.day}</h2>
           <p>Top: {outfit.top.name}</p>
@@ -37,19 +35,9 @@ export function OutfitsIndex(props) {
           <p>Bottom: {outfit.bottom.name}</p>
           <img src={outfit.bottom.image_url} width={300} />
         </div>
-      ))}
+      ))} */}
 
       <OutfitsNew tops={props.tops} onCreateOutfit={handleCreateOutfit} bottoms={props.bottoms} date={props.date} />
     </div>
   );
 }
-
-// {props.outfits.map((outfit) => (
-//   <div key={outfit.id}>
-//     <h2>{outfit.day}</h2>
-//     <p>Top: {outfit.top.name}</p>
-//     <img src={outfit.top.image_url} width={300} />
-//     <p>Bottom: {outfit.bottom.name}</p>
-//     <img src={outfit.bottom.image_url} width={300} />
-//   </div>
-// )
