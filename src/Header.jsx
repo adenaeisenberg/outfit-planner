@@ -7,7 +7,7 @@ export function Header() {
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
-            Outfit Planner App
+            CodeCloset
           </a>
           <button
             className="navbar-toggler"

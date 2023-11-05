@@ -51,7 +51,7 @@ export function Content() {
 
   return (
     <div className="container">
-      <h1>TrendTracker, CodeCloset,</h1>
+      <h1>CodeCloset</h1>
       <Routes>
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
