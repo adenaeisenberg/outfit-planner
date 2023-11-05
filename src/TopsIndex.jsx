@@ -14,6 +14,8 @@ export function TopsIndex(props) {
   return (
     <div>
       <h1>All Tops</h1>
+      <TopsNew onCreateTop={handleCreateTop} />
+      <br />
       <div className="row">
         {props.tops.map((top) => (
           <div key={top.id} className="card" style={{ width: "18rem" }}>
@@ -28,9 +30,6 @@ export function TopsIndex(props) {
           </div>
         ))}
       </div>
-      <br />
-
-      <TopsNew onCreateTop={handleCreateTop} />
     </div>
   );
 }
