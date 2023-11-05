@@ -14,6 +14,8 @@ export function BottomsIndex(props) {
   return (
     <div>
       <h1>All Bottoms</h1>
+      <BottomsNew onCreateBottom={handleCreateBottom} />
+      <br />
       <div className="row">
         {props.bottoms.map((bottom) => (
           <div key={bottom.id} className="card" style={{ width: "18rem" }}>
@@ -28,9 +30,6 @@ export function BottomsIndex(props) {
           </div>
         ))}
       </div>
-      <br />
-
-      <BottomsNew onCreateBottom={handleCreateBottom} />
     </div>
   );
 }
