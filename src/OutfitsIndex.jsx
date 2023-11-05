@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import axios from "axios";
 import { OutfitsNew } from "./OutfitsNew";
-// import { compareAsc, format } from "date-fns";
 
 export function OutfitsIndex(props) {
   const handleCreateOutfit = (params, successCallback) => {
@@ -17,10 +16,22 @@ export function OutfitsIndex(props) {
   return (
     <div>
       <h1>All outfits</h1>
+
+      <div className="card bg-dark text-white">
+        <img className="card-img" src="..." alt="Card image" />
+        <div className="card-img-overlay">
+          <h5 className="card-title">Card title</h5>
+          <p className="card-text">
+            This is a wider card with supporting text below as a natural lead-in to additional content. This content is
+            a little bit longer.
+          </p>
+          <p className="card-text">Last updated 3 mins ago</p>
+        </div>
+      </div>
+
       {props.outfits.map((outfit) => (
         <div key={outfit.id}>
           <h2>{outfit.day}</h2>
-          {/* <h2>{format({outfit.day}, 'dd-MM-yyyy')}</h2> */}
           <p>Top: {outfit.top.name}</p>
           <img src={outfit.top.image_url} width={300} />
           <p>Bottom: {outfit.bottom.name}</p>
@@ -32,3 +43,13 @@ export function OutfitsIndex(props) {
     </div>
   );
 }
+
+// {props.outfits.map((outfit) => (
+//   <div key={outfit.id}>
+//     <h2>{outfit.day}</h2>
+//     <p>Top: {outfit.top.name}</p>
+//     <img src={outfit.top.image_url} width={300} />
+//     <p>Bottom: {outfit.bottom.name}</p>
+//     <img src={outfit.bottom.image_url} width={300} />
+//   </div>
+// )
