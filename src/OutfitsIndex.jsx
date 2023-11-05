@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import axios from "axios";
 import { OutfitsNew } from "./OutfitsNew";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export function OutfitsIndex(props) {
   const handleCreateOutfit = (params, successCallback) => {
@@ -16,26 +17,21 @@ export function OutfitsIndex(props) {
   return (
     <div>
       <h1>All outfits</h1>
-
-      {props.outfits.map((outfit) => (
-        <div key={outfit.id} className="card text-center" style={{ width: "18rem" }}>
-          <div className="card-body">
-            <h5 className="card-title">{outfit.day}</h5>
-            <img className="card-img-top" src={outfit.top.image_url} alt="Card image cap" />
-            <img className="card-img-top" src={outfit.bottom.image_url} alt="Card image cap" />
+      <div className="container">
+        {props.outfits.map((outfit) => (
+          <div key={outfit.id} className="row row-cols-1 row-cols-md-7 g-4">
+            <div className="col">
+              <div className="card text-center" style={{ width: "18rem" }}>
+                <div className="card-body">
+                  <h5 className="card-title">{outfit.day}</h5>
+                  <img className="card-img-top" src={outfit.top.image_url} alt="Top" />
+                  <img className="card-img-top" src={outfit.bottom.image_url} alt="Bottom" />
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      ))}
-
-      {/* {props.outfits.map((outfit) => (
-        <div key={outfit.id}>
-          <h2>{outfit.day}</h2>
-          <p>Top: {outfit.top.name}</p>
-          <img src={outfit.top.image_url} width={300} />
-          <p>Bottom: {outfit.bottom.name}</p>
-          <img src={outfit.bottom.image_url} width={300} />
-        </div>
-      ))} */}
+        ))}
+      </div>
 
       <OutfitsNew tops={props.tops} onCreateOutfit={handleCreateOutfit} bottoms={props.bottoms} date={props.date} />
     </div>
