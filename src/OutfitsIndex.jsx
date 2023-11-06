@@ -19,6 +19,7 @@ export function OutfitsIndex(props) {
       <h1>All outfits</h1>
 
       <OutfitsNew tops={props.tops} onCreateOutfit={handleCreateOutfit} bottoms={props.bottoms} date={props.date} />
+      <br />
 
       <div className="row">
         {props.outfits.map((outfit) => (
