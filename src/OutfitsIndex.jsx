@@ -17,17 +17,13 @@ export function OutfitsIndex(props) {
   return (
     <div>
       <h1>All outfits</h1>
-      <div className="container">
+      <div className="row">
         {props.outfits.map((outfit) => (
-          <div key={outfit.id} className="row row-cols-1 row-cols-md-7 g-4">
-            <div className="col">
-              <div className="card text-center" style={{ width: "18rem" }}>
-                <div className="card-body">
-                  <h5 className="card-title">{outfit.day}</h5>
-                  <img className="card-img-top" src={outfit.top.image_url} alt="Top" />
-                  <img className="card-img-top" src={outfit.bottom.image_url} alt="Bottom" />
-                </div>
-              </div>
+          <div key={outfit.id} className="card text-center" style={{ width: "18rem" }}>
+            <div className="card-body">
+              <h5 className="card-title">{outfit.day}</h5>
+              <img className="card-img-top" src={outfit.top.image_url} alt="Top" />
+              <img className="card-img-top" src={outfit.bottom.image_url} alt="Bottom" />
             </div>
           </div>
         ))}
