@@ -68,6 +68,10 @@ export function Header() {
                       <LogoutLink />
                     </a>
                   </li>
+
+                  <a className="nav-link" href="/calendar">
+                    My Outfit Calendar--under construction 👷‍♀️!
+                  </a>
                 </>
               )}
             </ul>
