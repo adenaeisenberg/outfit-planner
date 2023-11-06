@@ -46,6 +46,7 @@ export function OutfitsNew(props) {
               ))}
             </select>
           </div>
+          <br />
           <button className="btn btn-primary" type="submit">
             Add Outfit to Wardrobe
           </button>
