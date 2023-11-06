@@ -17,6 +17,9 @@ export function OutfitsIndex(props) {
   return (
     <div>
       <h1>All outfits</h1>
+
+      <OutfitsNew tops={props.tops} onCreateOutfit={handleCreateOutfit} bottoms={props.bottoms} date={props.date} />
+
       <div className="row">
         {props.outfits.map((outfit) => (
           <div key={outfit.id} className="card text-center" style={{ width: "18rem" }}>
@@ -28,8 +31,6 @@ export function OutfitsIndex(props) {
           </div>
         ))}
       </div>
-
-      <OutfitsNew tops={props.tops} onCreateOutfit={handleCreateOutfit} bottoms={props.bottoms} date={props.date} />
     </div>
   );
 }

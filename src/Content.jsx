@@ -22,7 +22,7 @@ export function Content() {
 
   useEffect(handleIndexOutfits, []);
 
-  // Tops section //
+  // Tops section
   const [tops, setTops] = useState([]);
 
   const handleIndexTops = () => {
