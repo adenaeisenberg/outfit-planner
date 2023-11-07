@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { TopsNew } from "./TopsNew";
 import axios from "axios";
+import "./Button_89.css";
 
 export function TopsIndex(props) {
   const handleCreateTop = (params, successCallback) => {
@@ -23,7 +24,7 @@ export function TopsIndex(props) {
             <div className="card-body">
               <h5 className="card-title">{top.name}</h5>
               {/* <p className="card-text"> Insert text here</p> */}
-              <a href="/outfits" className="btn btn-primary">
+              <a href="/outfits" className="button-89">
                 Wear this top!
               </a>
             </div>
