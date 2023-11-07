@@ -2,6 +2,8 @@
 import { BottomsNew } from "./BottomsNew";
 import axios from "axios";
 
+import "./Button_89.css";
+
 export function BottomsIndex(props) {
   const handleCreateBottom = (params, successCallback) => {
     console.log("handleCreateBottom", params);
@@ -23,7 +25,7 @@ export function BottomsIndex(props) {
             <div className="card-body">
               <h5 className="card-title">{bottom.name}</h5>
               {/* <p className="card-text"> Insert text here</p> */}
-              <a href="/outfits" className="btn btn-primary">
+              <a href="/outfits" className="button-89">
                 Wear this bottom!
               </a>
             </div>
