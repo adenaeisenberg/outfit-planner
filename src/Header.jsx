@@ -6,9 +6,10 @@ export function Header() {
     <header>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">
+          {/* <a className="navbar-brand" href="/">
             CodeCloset
-          </a>
+          </a> */}
+          <img src="public/CodeClosetLogo.png" width={100} href="/" />
           <button
             className="navbar-toggler"
             type="button"
