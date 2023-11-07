@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import "./Dropdown.css";
+import "./Button_89.css";
 
 export function OutfitsNew(props) {
   const handleSubmit = (event) => {
@@ -47,7 +48,8 @@ export function OutfitsNew(props) {
               </select>
             </div>
             <br />
-            <button className="btn btn-primary" type="submit">
+            <br />
+            <button className="button-89" type="submit">
               Add Outfit to Wardrobe
             </button>
           </form>

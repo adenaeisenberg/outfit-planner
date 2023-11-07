@@ -6,15 +6,6 @@
   --bs-body-font-family: 'DM Mono', monospace;
 }
 
-/* body { 
-  font-family: 'Simonetta', serif;
-} */
-
-/* body {
-  font-family: 'Oswald', sans-serif !important;
-} */
-
-
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -52,3 +43,5 @@
 .read-the-docs {
   color: #888;
 }
+
+
