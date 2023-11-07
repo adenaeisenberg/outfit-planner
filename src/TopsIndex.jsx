@@ -23,11 +23,10 @@ export function TopsIndex(props) {
             <img className="card-img-top" src={top.image_url} alt="Card image cap" />
             <div className="card-body">
               <h5 className="card-title">{top.name}</h5>
-              {/* <p className="card-text"> Insert text here</p> */}
-              <a href="/outfits" className="button-89">
-                Wear this top!
-              </a>
             </div>
+            <a href="/outfits" className="button-89">
+              Wear this top!
+            </a>
           </div>
         ))}
       </div>
