@@ -9,7 +9,7 @@ export function Header() {
           {/* <a className="navbar-brand" href="/">
             CodeCloset
           </a> */}
-          <img src="public/CodeClosetLogo.png" width={100} href="/" />
+          <img src="public/CodeCloset_Logo.png" width={100} href="/" />
           <button
             className="navbar-toggler"
             type="button"
