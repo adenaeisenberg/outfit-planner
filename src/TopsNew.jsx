@@ -1,4 +1,7 @@
 /* eslint-disable react/prop-types */
+
+import "./Button_89.css";
+
 export function TopsNew(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -18,7 +21,7 @@ export function TopsNew(props) {
             <div>
               Image Url: <input name="image_url" type="text" />
             </div>
-            <button className="btn btn-primary" type="submit">
+            <button className="button-89" type="submit">
               Add Top
             </button>
           </form>
