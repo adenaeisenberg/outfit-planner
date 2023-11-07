@@ -1,5 +1,17 @@
 #root {
-  /* background-image: url("assets/hanger_background.webp") */
+  background-image: url("assets/CodeCloset_Background.webp")
+}
+
+.img_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  /* opacity: 0; */
+  z-index: 1;
+  background-color: #191b22;
+  opacity: 0.7;
 }
 
 html {
