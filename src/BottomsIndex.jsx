@@ -24,11 +24,10 @@ export function BottomsIndex(props) {
             <img className="card-img-bottom" src={bottom.image_url} alt="Card image cap" />
             <div className="card-body">
               <h5 className="card-title">{bottom.name}</h5>
-              {/* <p className="card-text"> Insert text here</p> */}
-              <a href="/outfits" className="button-89">
-                Wear this bottom!
-              </a>
             </div>
+            <a href="/outfits" className="button-89">
+              Wear this bottom!
+            </a>
           </div>
         ))}
       </div>
