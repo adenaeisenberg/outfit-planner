@@ -3,7 +3,7 @@ import axios from "axios";
 
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
-import { addDays, isSameDay, subDays } from "date-fns";
+// import { addDays, isSameDay, subDays } from "date-fns";
 
 export function ClothingCalendar() {
   // https://www.youtube.com/watch?v=WutUO81wE90

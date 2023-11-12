@@ -8,6 +8,8 @@ import { TopsIndex } from "./TopsIndex";
 import { BottomsIndex } from "./BottomsIndex";
 import { ClothingCalendar } from "./ClothingCalendar";
 
+import "./Login.css";
+
 export function Content() {
   // Outfit section //
   const [outfits, setOutfits] = useState([]);
