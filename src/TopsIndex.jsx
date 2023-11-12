@@ -20,8 +20,8 @@ export function TopsIndex(props) {
       <div className="row">
         {props.tops.map((top) => (
           <div key={top.id} className="card" style={{ width: "18rem" }}>
-            <img className="card-img-top" src={top.image_url} alt="Card image cap" />
             <div className="card-body">
+              <img className="card-img-top" src={top.image_url} alt="Card image cap" />
               <h5 className="card-title">{top.name}</h5>
             </div>
             <a href="/outfits" className="button-89">
