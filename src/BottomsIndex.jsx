@@ -21,8 +21,8 @@ export function BottomsIndex(props) {
       <div className="row">
         {props.bottoms.map((bottom) => (
           <div key={bottom.id} className="card" style={{ width: "18rem" }}>
-            <img className="card-img-bottom" src={bottom.image_url} alt="Card image cap" />
             <div className="card-body">
+              <img className="card-img-bottom" src={bottom.image_url} alt="Card image cap" />
               <h5 className="card-title">{bottom.name}</h5>
             </div>
             <a href="/outfits" className="button-89">
