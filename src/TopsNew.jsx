@@ -21,6 +21,11 @@ export function TopsNew(props) {
             <div>
               Image Url: <input name="image_url" type="text" />
             </div>
+
+            <label htmlFor="exampleFormControlFile1">Upload Top Image</label>
+            <input type="file" className="form-control-file" id="exampleFormControlFile1" />
+
+            <br />
             <button className="button-89" type="submit">
               Add Top
             </button>
