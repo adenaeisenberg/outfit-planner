@@ -18,12 +18,13 @@ export function TopsNew(props) {
             <div>
               Name: <input name="name" type="text" />
             </div>
-            <div>
+            {/* <div>
               Image Url: <input name="image_url" type="text" />
-            </div>
+            </div> */}
 
-            <label htmlFor="exampleFormControlFile1">Upload Top Image</label>
-            <input type="file" className="form-control-file" id="exampleFormControlFile1" />
+            <label htmlFor="exampleFormControlFile1">Upload Top Image: </label>
+            {/* <input name="image_url" type="file" className="form-control-file" id="exampleFormControlFile1" /> */}
+            <input type="file" id="myFile" name="image_url" />
 
             <br />
             <button className="button-89" type="submit">
