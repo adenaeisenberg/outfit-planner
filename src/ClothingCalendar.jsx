@@ -8,22 +8,38 @@ import "react-calendar/dist/Calendar.css";
 export function ClothingCalendar() {
   // https://www.youtube.com/watch?v=WutUO81wE90
   const [date, setDate] = useState(new Date());
+  const [outfit, setOutfit] = useState([]);
 
   const onChange = (date) => {
     setDate(date);
   };
 
   useEffect(() => {
-    console.log(date);
+    let dateString = date.toString();
+    // console.log(date);
     axios.get("http://localhost:3000/outfits.json").then((response) => {
-      // response.data; // This line doesn't seem to do anything
+      // response.data;
       console.log(response);
 
       for (let i = 0; i < response.data.length; i++) {
-        console.log(response.data[i]); // Print each item in the response data array
+        // console.log(response.data[i]); // Print each item in the response data array
+
+        console.log(typeof dateString);
+        // console.log(typeof response.data[i].calday);
+
+        if (dateString.includes(response.data[i].calday)) console.log("This works");
+        setOutfit(response.data[i]);
       }
     });
   }, [date]);
+
+  // function tileContent({ date, view }) {
+  //   if (view === "month") {
+  //     if (dateString.includes(response.data[i].calday)) {
+
+  //     }
+  //   }
+  // }
 
   return (
     <>
@@ -33,10 +49,12 @@ export function ClothingCalendar() {
         onClickDay={(day) => setDate(day)}
         calendarType={"hebrew"} // calendar goes from Sun- Sat instead of Mon-Sun
         minDetail={"year"} // can change this to "century" or "month"
-        navigationLabel={({ date, locale }) => `Today is: ${date.toLocaleDateString(locale)}`} // this isn't quite working
+        // navigationLabel={({ date, locale }) => `Today is: ${date.toLocaleDateString(locale)}`} // this isn't quite working
         next2Label={false} // user can't click to next year
         prev2Label={false} // user can't click to prev year
-        // tileContent={tileContent}
+        tileContent={({ date, view }) =>
+          view === "month" && date.toString() === outfit.calday ? <p>{date.toString()}</p> : null
+        }
       />
       <button>Today</button>
     </>
