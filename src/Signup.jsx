@@ -1,5 +1,4 @@
-// CHECKOUT THESE BOOTSRAPS https://getbootstrap.com/docs/4.0/components/dropdowns/#menu-forms 
-
+// CHECKOUT THESE BOOTSRAPS https://getbootstrap.com/docs/4.0/components/dropdowns/#menu-forms
 
 import axios from "axios";
 import { useState } from "react";
@@ -48,7 +47,7 @@ export function Signup() {
         </div>
         <button type="submit">Signup</button>
       </form>
-      Already a VW user? Click <Link to="/login">here</Link> to login
+      Already a Code Closet user? Click <Link to="/login">here</Link> to login
     </div>
   );
 }
